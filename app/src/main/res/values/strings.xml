@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OnlineStoreApp</string>
+    <string name="Passwordforgot">forget ur password?</string>
+    <string name="log_in">Log in</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+</resources>
