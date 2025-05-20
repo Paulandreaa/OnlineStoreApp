@@ -4,4 +4,10 @@
     <string name="log_in">Log in</string>
     <string name="password">Password</string>
     <string name="username">Username</string>
+    <string name="boton_sesion_con_google">Botón sesion con google</string>
+    <string name="boton_siguiente_del_login">Botón siguiente del login</string>
+    <string name="nombre_producto_casillas">nombre_producto_casillas</string>
+    <string name="boton_act_inicio">Botón_act_inicio</string>
+    <string name="boton_de_menu_barra_lateral">Botón de menu barra lateral</string>
+    <string name="nombre_del_producto">Nombre del Producto</string>
 </resources>

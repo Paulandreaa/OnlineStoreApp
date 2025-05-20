@@ -1,0 +1,12 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <gradient
+        android:startColor="@color/Drakpurple"
+        android:centerColor="@color/earlypurple"
+        android:endColor="@color/softpurple"
+        android:angle="45"/>
+    <stroke
+        android:width="6dp"
+
+        android:color="@color/softpurple" /> <!-- Color del borde -->
+</shape>

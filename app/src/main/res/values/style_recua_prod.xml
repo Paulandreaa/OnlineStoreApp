@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    --style
+    <style name ="cuadros_productos" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/btn_search</item>
+        <item name="android:shadowRadius">8</item>
+        <item name="itemShapeFillColor">@color/softpurple</item>
+    </style>
+         </resources>
