@@ -3,9 +3,11 @@ package com.example.onlinestoreapp.activities
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.onlinestoreapp.activities.Productlistactivity
 import com.example.onlinestoreapp.R
@@ -24,6 +26,7 @@ class Loginactivity : AppCompatActivity() {
     private lateinit var etUsuario: EditText //usuario
     private lateinit var etContrasena: EditText //contraseña
     private lateinit var btnLogin: ImageButton //boton flecha
+    private lateinit var TvRegistrarse: TextView // boton registrarse
 
     // login con Google
     private lateinit var btngooglesesion: ImageButton //boton google sesion
@@ -39,6 +42,7 @@ class Loginactivity : AppCompatActivity() {
         etUsuario = findViewById(R.id.Username)
         etContrasena = findViewById(R.id.password)
         btnLogin = findViewById(R.id.btn_next_listproduct)
+        TvRegistrarse = findViewById(R.id.btn_Login_register)
 
         btnLogin.setOnClickListener {
             val usuario = etUsuario.text.toString()
@@ -64,6 +68,13 @@ class Loginactivity : AppCompatActivity() {
         btngooglesesion.setOnClickListener {
             val signInIntent = googleSignInClient.signInIntent
             startActivityForResult(signInIntent, RC_SIGN_IN)
+        }
+
+        TvRegistrarse.setOnClickListener {
+            val intent = Intent(this, Registeractivitys::class.java)
+            startActivity(intent)
+            finish()
+
         }
     }
 
@@ -92,5 +103,6 @@ class Loginactivity : AppCompatActivity() {
             Toast.makeText(this, "Error al iniciar sesión con Google", Toast.LENGTH_SHORT).show()
         }
     }
+
 }
 

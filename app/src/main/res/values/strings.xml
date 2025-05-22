@@ -10,4 +10,11 @@
     <string name="boton_act_inicio">Botón_act_inicio</string>
     <string name="boton_de_menu_barra_lateral">Botón de menu barra lateral</string>
     <string name="nombre_del_producto">Nombre del Producto</string>
+    <string name="create_password">Create password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="correo_electronico">Correo electronico</string>
+    <string name="create_username">Create username</string>
+    <string name="boton_siguiente_del_register">boton siguiente del register</string>
+    <string name="login">login</string>
+    <string name="sigin">Sigin</string>
 </resources>

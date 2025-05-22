@@ -14,15 +14,28 @@ class Sqlitedatabase(context: Context) :
             "CREATE TABLE usuarios(" +
                     "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "usuario TEXT," +
-                    "contrasena TEXT)"
+                    "contrasena TEXT," +
+                    "confirmacioncontrasena TEXT," +
+                    "correo TEXT)"
+
         )
-        // Insertar un usuario de prueba
+// Insertar un usuario de login
         val valores = ContentValues().apply {
             put("usuario", "admin")
             put("contrasena", "1234")
         }
         db.insert("usuarios", null, valores)
+
+        // Insertar un usuario de prueba register
+        val valoresregister = ContentValues().apply {
+            put("usuario", "admin")
+            put("contrasena", "1234")
+            put("confirmacionContrasena", "1234")
+            put("correo", "admin@correo.com")
+        }
+        db.insert("usuarios", null, valoresregister)
     }
+
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS usuarios")
@@ -30,13 +43,28 @@ class Sqlitedatabase(context: Context) :
     }
 
     fun validarUsuario(usuario: String, contrasena: String): Boolean {
-        val db = readableDatabase
-        val cursor: Cursor = db.rawQuery(
-            "SELECT * FROM usuarios WHERE usuario = ? AND contrasena = ?",
-            arrayOf(usuario, contrasena)
-        )
-        val existe = cursor.count > 0
+        val db = this.readableDatabase
+        val query = "SELECT * FROM usuarios WHERE usuario = ? AND contrasena = ?"
+        val cursor = db.rawQuery(query, arrayOf(usuario, contrasena))
+        val existe = cursor.moveToFirst()
         cursor.close()
+        db.close()
         return existe
+    }
+    fun registrarUsuario(usuario: String, contrasena: String, confirmacion: String, correo: String): Boolean {
+        if (contrasena != confirmacion) return false
+
+        val db = this.writableDatabase
+        val values = ContentValues().apply {
+            put("usuario", usuario)
+            put("contrasena", contrasena)
+            put("confirmacionContrasena", confirmacion)
+            put("correo", correo)
+        }
+
+        val resultado = db.insert("usuarios", null, values)
+        db.close()
+
+        return resultado != -1L
     }
 }

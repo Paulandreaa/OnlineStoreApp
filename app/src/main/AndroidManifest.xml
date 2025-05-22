@@ -34,6 +34,8 @@
             android:exported="false"/>
         <activity android:name=".activities.Productlistactivity"
             android:exported="false"/>
+        <activity android:name=".activities.Registeractivitys"
+            android:exported="false"/>
     </application>
 
 </manifest>
