@@ -44,9 +44,24 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linea1_rgs" />
-
     <ImageButton
-        android:id="@+id/btn_next_login"
+        android:id="@+id/return_login"
+        android:layout_width="41dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:alpha="0.5"
+        android:background="@drawable/btn_circle"
+        android:contentDescription="@string/boton_regresar_login"
+        android:scaleType="centerInside"
+        android:src="@drawable/flecha"
+        android:rotation="180"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageButton
+        android:id="@+id/btn_next_login2"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_gravity="center"
@@ -60,6 +75,8 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <EditText
         android:id="@+id/Username"

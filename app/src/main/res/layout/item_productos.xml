@@ -11,8 +11,8 @@
         android:id="@+id/imgProducto"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:background="@color/white"
-        android:scaleType="centerInside"
+        android:background="@drawable/btn_search"
+        android:scaleType="fitCenter"
         android:src="@drawable/logo" />
 
     <TextView
@@ -30,6 +30,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="$999.99"
-        android:textColor="#6200EE"
+        android:textColor="@color/middlepurple"
         android:textSize="13sp" />
 </LinearLayout>

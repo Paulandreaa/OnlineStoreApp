@@ -16,5 +16,7 @@
     <string name="create_username">Create username</string>
     <string name="boton_siguiente_del_register">boton siguiente del register</string>
     <string name="login">login</string>
-    <string name="sigin">Sigin</string>
+    <string name="sig_in">Sig in</string>
+    <string name="boton_regresar_login">boton regresar login</string>
+    <string name="claveId">453941954291-h7eb1j1baft9g5saglh04evkqcug3np9.apps.googleusercontent.com</string>
 </resources>

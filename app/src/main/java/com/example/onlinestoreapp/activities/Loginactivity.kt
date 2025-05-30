@@ -27,6 +27,7 @@ class Loginactivity : AppCompatActivity() {
     private lateinit var etContrasena: EditText //contraseña
     private lateinit var btnLogin: ImageButton //boton flecha
     private lateinit var TvRegistrarse: TextView // boton registrarse
+    private val TAG = "GoogleSignIn"
 
     // login con Google
     private lateinit var btngooglesesion: ImageButton //boton google sesion
@@ -44,6 +45,7 @@ class Loginactivity : AppCompatActivity() {
         btnLogin = findViewById(R.id.btn_next_listproduct)
         TvRegistrarse = findViewById(R.id.btn_Login_register)
 
+
         btnLogin.setOnClickListener {
             val usuario = etUsuario.text.toString()
             val contrasena = etContrasena.text.toString()
@@ -56,6 +58,7 @@ class Loginactivity : AppCompatActivity() {
                 Toast.makeText(this, "Incorrecto, por favor verifique su nombre de usuario o contraseña", Toast.LENGTH_SHORT).show()
             }
         }
+
 
         // Login google
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -87,12 +90,13 @@ class Loginactivity : AppCompatActivity() {
         }
     }
 
-    private fun handleSignInResult(task: Task<GoogleSignInAccount>) {
+    private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
         try {
-            val account = task.getResult(ApiException::class.java)
+            val account = completedTask.getResult(ApiException::class.java)
 
             // ingreso valido
-            Log.d("GOOGLE_SIGN_IN", "Cuenta: ${account.email}")
+            Log.d(TAG,"signInSucces: ${account.displayName}")
+            Toast.makeText(this, "Bievenido ${account.displayName}", Toast.LENGTH_SHORT).show()
 
             val intent = Intent(this, Productlistactivity::class.java)
             startActivity(intent)

@@ -67,7 +67,7 @@
         android:layout_marginTop="252dp"
         android:alpha="0.5"
         android:gravity="center"
-        android:text="@string/sigin"
+        android:text="@string/sig_in"
         android:textColor="@color/softpurple"
         android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"

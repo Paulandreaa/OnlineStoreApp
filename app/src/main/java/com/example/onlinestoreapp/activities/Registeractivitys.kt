@@ -17,6 +17,7 @@ class Registeractivitys : AppCompatActivity() {
     private lateinit var etContrasena: EditText
     private lateinit var etConfirmacion: EditText
     private lateinit var btnRegistrar: ImageButton
+    private lateinit var btnreturnlogin: ImageButton
     private lateinit var db: Sqlitedatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +30,8 @@ class Registeractivitys : AppCompatActivity() {
         etCorreo = findViewById(R.id.mail)
         etContrasena = findViewById(R.id.createpassword)
         etConfirmacion = findViewById(R.id.confirmpassword)
-        btnRegistrar = findViewById(R.id.btn_next_login)
+        btnRegistrar = findViewById(R.id.btn_next_login2)
+        btnreturnlogin = findViewById(R.id.return_login)
 
         btnRegistrar.setOnClickListener {
             val usuario = etUsuario.text.toString().trim()
@@ -55,6 +57,7 @@ class Registeractivitys : AppCompatActivity() {
                 put("confirmacion_contrasena", confirmacion)
             }
 
+
             val resultado = dbWritable.insert("usuarios", null, valores)
             if (resultado != -1L) {
                 Toast.makeText(this, "Usuario registrado correctamente", Toast.LENGTH_SHORT).show()
@@ -63,6 +66,12 @@ class Registeractivitys : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Error al registrar usuario", Toast.LENGTH_SHORT).show()
             }
+        }
+        btnreturnlogin.setOnClickListener {
+            val intent = Intent(this, Loginactivity::class.java)
+            startActivity(intent)
+            finish()
+
         }
     }
 }
