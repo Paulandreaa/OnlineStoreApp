@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">OnlineStoreApp</string>
-    <string name="Passwordforgot">forget ur password?</string>
+    <string name="Passwordforgot">Forgot ur password?</string>
     <string name="log_in">Log in</string>
     <string name="password">Password</string>
     <string name="username">Username</string>
@@ -19,4 +19,21 @@
     <string name="sig_in">Sig in</string>
     <string name="boton_regresar_login">boton regresar login</string>
     <string name="claveId">453941954291-h7eb1j1baft9g5saglh04evkqcug3np9.apps.googleusercontent.com</string>
+    <string name="tienda_fisica">Tienda fisica</string>
+    <string name="cerrar_men">Cerrar menú</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="ubicaci_n">Ubicación</string>
+    <string name="pedidos">Pedidos</string>
+    <string name="servicio_al_cliente">Servicio al cliente</string>
+    <string name="cerrar_sesi_n">Cerrar sesión</string>
+    <string name="Minombre">Paula Andrea Ramirez</string>
+    <string name="direccion">Direccion</string>
+    <string name="boton_regresar_home">regresarhome\n</string>
+    <string name="telefono">Telefono</string>
+    <string name="dia">Dia</string>
+    <string name="barrafecha">/</string>
+    <string name="mes">Mes</string>
+    <string name="ano">Año</string>
+    <string name="ownald_qr_profile">Downald Qr profile</string>
+    <string name="guion">-</string>
 </resources>

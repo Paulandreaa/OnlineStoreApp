@@ -41,14 +41,12 @@
 
     </FrameLayout>
 
-
-
     <ImageView
         android:id="@+id/hada"
-        android:layout_width="102dp"
-        android:layout_height="88dp"
+        android:layout_width="90dp"
+        android:layout_height="76dp"
         android:layout_margin="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="7dp"
         android:clickable="true"
         android:contentDescription="@string/boton_act_inicio"
         android:focusable="true"
@@ -58,14 +56,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/menu"
-        android:layout_width="56dp"
-        android:layout_height="90dp"
-        android:layout_margin="3dp"
+        android:layout_width="73dp"
+        android:layout_height="78dp"
+        android:layout_marginVertical="7dp"
+        android:layout_marginStart="0dp"
+        android:backgroundTint="@color/softpurple"
         android:clickable="true"
         android:contentDescription="@string/boton_de_menu_barra_lateral"
         android:focusable="true"
+        android:scaleType="centerInside"
         android:src="@drawable/menubarra"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -183,12 +184,14 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <ImageView
+                        <ImageButton
                             android:layout_width="46dp"
                             android:layout_height="46dp"
-                            android:background="@drawable/bck_central"
+                            android:background="@drawable/bck_profile"
                             android:src="@drawable/icn_profile"
-                            app:tint="@color/black" />
+                            android:scaleType="centerInside"
+                            app:tint="@color/black"
+                            android:id="@+id/btn_profile"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

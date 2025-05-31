@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/frag_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/return_menulateral"
+            android:layout_width="41dp"
+            android:layout_height="39dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="0dp"
+            android:alpha="0.5"
+            android:background="@drawable/btn_circle"
+            android:contentDescription="@string/boton_regresar_login"
+            android:rotation="180"
+            android:scaleType="centerInside"
+            android:src="@drawable/flecha" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_search"
+            android:text="@string/tienda_fisica"
+            android:textColor="@color/Drakpurple"
+            android:id="@+id/btn_ubi"/>
+    </LinearLayout>
+
+</LinearLayout>

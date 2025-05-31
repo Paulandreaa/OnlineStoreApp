@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menuLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@drawable/bck_menulateral"
+    >
+
+    <ImageButton
+        android:id="@+id/btnCerrar"
+        android:layout_width="49dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="13.5dp"
+        android:layout_marginLeft="5dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/cerrar_men"
+        android:scaleType="centerInside"
+        android:src="@drawable/menubarra" />
+
+    <Button android:id="@+id/btnFavoritos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/favoritos"
+        android:textColor="@color/Drakpurple"
+        android:backgroundTint="@color/softpurple"
+        />
+
+    <Button android:id="@+id/btnUbicacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ubicaci_n"
+        android:textColor="@color/Drakpurple"
+        android:backgroundTint="@color/softpurple"/>
+
+    <Button android:id="@+id/btnPedidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pedidos"
+        android:textColor="@color/Drakpurple"
+        android:backgroundTint="@color/softpurple"/>
+
+    <Button android:id="@+id/btnServicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/servicio_al_cliente"
+        android:textColor="@color/Drakpurple"
+        android:backgroundTint="@color/softpurple"/>
+
+    <Button android:id="@+id/btnCerrarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Drakpurple"
+        android:backgroundTint="@color/softpurple"
+        android:text="@string/cerrar_sesi_n" />
+</LinearLayout>
